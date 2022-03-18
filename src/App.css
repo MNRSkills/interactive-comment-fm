@@ -1,4 +1,31 @@
+:root{
+  --light-gray: hsl(228, 33%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
 .App {
-  background-color: red;
+  background-color:var(--light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px; 
+  height: 100vh;
+}
+
+form{
+  background-color: var(--white);
+}
+
+
+.comment-form input{
+  padding: 40px;
+}
+
+.comment-form button{
+  background-color: hsl(238, 40%, 52%);
+  color:hsl(0, 0%, 100%);
+  padding: 20px;
+  border-radius: 10%;
+  /* width: 33px; */
 }
 

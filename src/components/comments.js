@@ -1,18 +1,23 @@
-import React from 'react'
+import React, { useState } from "react";
 
 const Comments = () => {
+  const [comment, setComment] = useState("");
 
   const handleSubmit = (e) => {
-    return console.log("THIS HANDLE WORKS", e)
-  }
+    e.preventDefault();
+    
+    console.log("THIS HANDLE WORKS", comment);
+  };
   return (
-    <div>
-        <form onSubmit={handleSubmit}>
-            <input type="text" placeholder='Comments'/>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-  )
-}
+    <form onSubmit={handleSubmit} className='comment-form'>
+      <input
+        type='textarea'
+        placeholder='Add a comments..'
+        onChange={(e) => setComment(e.target.value)}
+      />
+      <button type='submit'>SEND</button>
+    </form>
+  );
+};
 
-export default Comments
+export default Comments;
