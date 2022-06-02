@@ -1,10 +1,11 @@
 import CommentBar from "./components/comments";
-import './App.css';
+import SingleComment from "./components/singleComment";
 
 function App() {
   return (
-    <div className="App">
-      <CommentBar/>
+    <div className='App container bg-gray-800 h-screen '>
+      <CommentBar />
+      <SingleComment />
     </div>
   );
 }
